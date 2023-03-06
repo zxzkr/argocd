@@ -42,5 +42,5 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64
           push: true
-          tags: ${{ steps.docker_meta.outputs.tags }}, ${{ steps.docker_meta.outputs }}:latest
+          tags: ${{ steps.docker_meta.outputs.tags }}, ${{ secrets.DOCKERHUB_USERNAME }}/argocd:latest
           labels: ${{ steps.docker_meta.outputs.labels }}
